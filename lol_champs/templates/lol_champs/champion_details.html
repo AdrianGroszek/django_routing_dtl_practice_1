@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'lol_champs/champion_details.css' %}" >
+{% endblock %}
+
+{% block page_title %}
+{{ champion.name }} - details
+{% endblock %}
+
+{% block content %}
+  <div class="champion-details-container">
+    <a href="{% url 'champions-page' %}">Back</a>
+    <div class="champion-header">
+        <img src="{{ champion.image_url }}" alt="{{ champion.name }}" class="champion-img-large">
+        <div class="champion-info">
+            <h1>{{ champion.name }}</h1>
+            <p><strong>Rola:</strong> {{ champion.role }}</p>
+            <p><strong>Trudność:</strong> {{ champion.difficulty }}</p>
+        </div>
+    </div>
+    <div class="champion-description">
+        <h2>Opis</h2>
+        <p>{{ champion.description }}</p>
+    </div>
+  </div>
+{% endblock %}

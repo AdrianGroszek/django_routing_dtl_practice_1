@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'lol_champs/champions.css' %}" >
+{% endblock %}
+
+{% block page_title %}
+  Lista Championów
+{% endblock %}
+
+{% block content %}
+  <h2 class="section-title">Lista Championów</h2>
+
+  <table class="champion-table">
+      <thead>
+          <tr>
+              <th>Zdjęcie</th>
+              <th>Nazwa</th>
+              <th>Rola</th>
+              <th>Trudność</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for champ in champions %}
+            <tr class="clickable-row">
+                <td>
+                    <a href="{% url 'single-champion' champ.name %}">
+                        <img src="{{ champ.image_url }}" alt="{{ champ.name }}" class="champ-img">
+                    </a>
+                </td>
+                <td><a href="{% url 'single-champion' champ.name %}">{{ champ.name }}</a></td>
+                <td><a href="{% url 'single-champion' champ.name %}">{{ champ.role }}</a></td>
+                <td><a href="{% url 'single-champion' champ.name %}">{{ champ.difficulty }}</a></td>
+            </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+{% endblock %}

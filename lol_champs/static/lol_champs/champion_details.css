@@ -1,0 +1,68 @@
+.champion-details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 183, 255, 0.5);
+    color: #eee;
+    font-size: 1.1rem;
+}
+
+.champion-header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.champion-img-large {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #00b7ff;
+}
+
+.champion-info h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #f9c80e;
+}
+
+.champion-info p {
+    margin: 6px 0;
+    font-weight: 600;
+    color: #00b7ff;
+}
+
+.champion-description h2 {
+    margin-bottom: 10px;
+    color: #f9c80e;
+    border-bottom: 2px solid #00b7ff;
+    padding-bottom: 6px;
+}
+
+.champion-description p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.champion-details-container > a {
+    display: inline-block;
+    padding: 1px 20px;
+    background-color: #f9c80e; /* żółty */
+    color: #0a0a0a; /* ciemny tekst dla kontrastu */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(249, 200, 14, 0.5);
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 20px;
+}
+
+.champion-details-container > a:hover {
+    background-color: #d4b50a;
+    color: #000;
+    box-shadow: 0 5px 12px rgba(212, 181, 10, 0.7);
+}

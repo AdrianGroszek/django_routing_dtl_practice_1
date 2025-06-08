@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'lol_champs/index.css' %}" >
+{% endblock %}
+
+{% block page_title %}
+  Champions Finder
+{% endblock %}
+
+{% block content %}
+  <div class="hero">
+    <h2>Witaj w bazie bohaterów League of Legends</h2>
+    <p>
+        Przeglądaj postacie, sprawdzaj ich role, poznawaj umiejętności. Ta strona to fanowski projekt
+        stworzony z myślą o nauce Django i uczczeniu epickiego świata League of Legends.
+    </p>
+    <a href="{% url 'champions-page' %}" class="btn">Zobacz championów</a>
+
+    <div class="features">
+        <div class="feature-box">
+            <h3>🧙 Każda postać</h3>
+            <p>Znajdziesz tu dokładne informacje o wybranych bohaterach LoL-a, takich jak Ahri, Garen, Yasuo i inni.</p>
+        </div>
+        <div class="feature-box">
+            <h3>⚔️ Role i styl gry</h3>
+            <p>Dowiedz się, które postacie są magami, wojownikami czy zabójcami — i jak najlepiej ich używać.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🎯 Umiejętności</h3>
+            <p>Poznaj unikalne zestawy skilli każdego bohatera. Ich opanowanie to klucz do zwycięstwa.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
